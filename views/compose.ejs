@@ -1,0 +1,70 @@
+<%- include("partials/header"); -%>
+<h1>Compose new post</h1>
+<form action="/compose" method="post">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      name="postTitle"
+      id="title"
+      class="form-control"
+      autocomplete="off"
+    />
+    <label for="author">Author</label>
+    <input
+      type="text"
+      name="postAuthor"
+      id="author"
+      class="form-control"
+      autocomplete="off"
+    />
+    <label for="coverImg">Cover Image</label>
+    <input
+      type="text"
+      name="imgUrl"
+      id="coverImg"
+      class="form-control"
+      autocomplete="off"
+      value="https://picsum.photos/800/250"
+    />
+    <label for="coverImgAlt">Cover Image Alt Text</label>
+    <input
+      type="text"
+      name="imgAlt"
+      id="coverImgAlt"
+      class="form-control"
+      autocomplete="off"
+    />
+    <label for="post">Post</label>
+    <textarea
+      name="postContent"
+      id="post"
+      cols="30"
+      rows="10"
+      class="form-control"
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Publish</button>
+</form>
+
+<h1>Delete Posts</h1>
+<form action="/delete" method="post">
+  <div class="form-group">
+    <label for="postId">Post URL</label>
+    <input
+      type="text"
+      name="postId"
+      id="postId"
+      class="form-control"
+      autocomplete="off"
+      placeholder="Enter Post URL"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Delete</button>
+</form>
+<h1>Delete All Posts</h1>
+<form action="/deleteAll" method="post">
+  <button type="submit" class="btn btn-primary btn-mrg">Delete All</button>
+</form>
+<hr class="divider" />
+<%- include("partials/footer"); -%>

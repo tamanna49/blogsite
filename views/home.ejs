@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<p>
+  Welcome to Blazing Blog , are you a programmer looking for some of the best
+  articles on solving various problems from fixing a bug to deploying a website
+  you are at the right place.
+</p>
+<% blogPosts.forEach(function(blogPost){ %>
+<h1><%= blogPost.postTitle %></h1>
+<img src="<%= blogPost.imgUrl %>" alt="<%= blogPost.imgAlt %>" class="cover-img">
+<p>
+  <%=blogPost.postContent.slice(0, 325)+" ..." %>
+  <a href="/posts/<%= blogPost.postURL %> ">Read More</a>
+</p>
+
+<% }); %> <%- include('partials/footer'); -%>

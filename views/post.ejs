@@ -1,0 +1,9 @@
+<%- include("partials/header"); -%>
+<h1><%= blogPost.postTitle %> </h1>
+<hr>
+<span>Published - <%= blogPost.postDate %></span>
+<h5>By <%= blogPost.postAuthor %></h5>
+<hr>
+<img src="<%= blogPost.imgUrl %>" alt="<%= blogPost.imgAlt %>" class="cover-img">
+<p><%= blogPost.postContent %></p>
+<%- include("partials/footer"); -%>
